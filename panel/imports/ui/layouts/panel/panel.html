@@ -1,0 +1,8 @@
+<template name="PanelLayout">
+    <div class="main-app theme-{{#if darkThemeState}}dark{{else}}light{{/if}}">
+        {{> sAlert}}
+        {{> NavMenuTemplate}}
+        {{> SideNavTemplate}}
+        {{> Template.dynamic template=PanelTemplates}}
+    </div>
+</template>

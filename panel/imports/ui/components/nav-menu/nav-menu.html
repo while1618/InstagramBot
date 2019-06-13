@@ -1,0 +1,38 @@
+<template name="NavMenuTemplate">
+    <div class="nav-menu">
+        <div class="profile-selected">
+            <div class="profile">
+                {{#with getFile}}
+                    <img src="{{link}}" class="profile-pic" alt="profilePic">
+                {{/with}}
+                {{selectedProfile}}
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a class=".get-followers" href="/get-followers" data-toggle="tooltip" data-placement="bottom" title="Find followers"><img src="/images/get_followers.svg" alt=""></a>
+            <a href="/messages-menu/when-followed" data-toggle="tooltip" data-placement="bottom" title="Set messages for followers"><img src="/images/messages.svg" alt=""></a>
+            <a href="/posts-menu/timeline" data-toggle="tooltip" data-placement="bottom" title="Schedule posts and story content"><img src="/images/add_post.svg" alt=""></a>
+            <a href="/config" data-toggle="tooltip" data-placement="bottom" title="Settings"><img src="/images/config.svg" alt=""></a >
+            <a href="/statistics" data-toggle="tooltip" data-placement="bottom" title="Statistics"><img src="/images/statistics.svg" alt=""></a>
+        </div>
+
+        <div class="actions-wrapper">
+            <div class="actions">
+                {{currentUser.username}}
+                <img src="/images/dropdown_arrow.svg" alt="">
+
+                <div class="actions-menu">
+                    <a href="/landing">Home</a>
+                    <a href="/guides">Guides</a>
+                    <div class="checkbox-group">
+                        <span>Dark theme</span>
+                        <input type="checkbox" id="dark-theme-toggle" checked="{{darkThemeState}}" class="styled-checkbox">
+                        <label for="dark-theme-toggle" class="toggler"></label>
+                    </div>
+                    <a href="#" id="logout">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

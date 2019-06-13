@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 72.3 100" style="enable-background:new 0 0 72.3 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F0575B;}
+	.st1{fill:#FFFFFF;}
+	.st2{opacity:0.12;fill:url(#SVGID_1_);}
+</style>
+<g>
+	<g class="svg-icons">
+		<g>
+			<g id="XMLID_34_">
+				<path id="XMLID_45_" class="st0" d="M56.9,57.1H45.7c-1.1,0-1.9,0.9-1.9,1.9v6.3c0,1.1,0.9,1.9,1.9,1.9h2c0.2,0,0.4,0.1,0.5,0.2
+					l2.5,2.5c0.3,0.3,0.8,0.3,1.1,0l2.5-2.5c0.1-0.1,0.3-0.2,0.5-0.2h2c1.1,0,1.9-0.9,1.9-1.9v-6.3C58.9,58,58,57.1,56.9,57.1z"/>
+			</g>
+			<path class="st1" d="M53.8,63.8c0.2-0.4,0.4-1,0.4-1.5c0-1.8-1.4-3.2-3.2-3.2c-1.8,0-3.2,1.4-3.2,3.2c0,1.8,1.4,3.2,3.2,3.2
+				c0.5,0,1-0.1,1.4-0.3l1.8,0.3L53.8,63.8z"/>
+		</g>
+		<g id="XMLID_46_">
+			<path id="XMLID_49_" class="st0" d="M29,42.4H6.3c-2.2,0-4,1.8-4,4v12.8c0,2.2,1.8,4,4,4h4c0.4,0,0.8,0.2,1.1,0.5l5.2,5.2
+				c0.6,0.6,1.6,0.6,2.2,0l5.2-5.2c0.3-0.3,0.7-0.5,1.1-0.5h4c2.2,0,4-1.8,4-4V46.3C33,44.1,31.2,42.4,29,42.4z"/>
+			<g id="XMLID_47_">
+				<path id="XMLID_48_" class="st1" d="M25,49.6c-0.2-2-1.9-3.6-3.9-3.7c-2-0.1-3.6,1.3-4.1,3c-0.5-1.9-2.3-3.2-4.4-3
+					c-1.8,0.2-3.3,1.6-3.6,3.3c-0.2,1.4,0.2,2.7,1.1,3.6l0,0l0,0c0,0,0,0,0,0l6.5,6.5l6.9-6.3h0C24.5,52.3,25.1,51,25,49.6z"/>
+			</g>
+		</g>
+		<g>
+			<path id="XMLID_33_" class="st0" d="M62.9,2.5H24.3c-3.7,0-6.7,3-6.7,6.7v21.6c0,3.7,3,6.7,6.7,6.7h6.8c0.7,0,1.4,0.3,1.9,0.8
+				l8.8,8.8c1,1,2.7,1,3.7,0l8.8-8.8c0.5-0.5,1.2-0.8,1.9-0.8h6.8c3.7,0,6.7-3,6.7-6.7V9.2C69.6,5.5,66.6,2.5,62.9,2.5z"/>
+			<g id="XMLID_16_">
+				<path id="XMLID_18_" class="st1" d="M47,14.5c0,2.8-2.3,5.1-5.1,5.1s-5.1-2.3-5.1-5.1c0-2.8,2.3-5.1,5.1-5.1S47,11.7,47,14.5z"
+					/>
+				<path id="XMLID_17_" class="st1" d="M52.5,31.9H31.3l0,0c0-5.4,4.3-9.7,9.7-9.7h1.8C48.2,22.2,52.5,26.5,52.5,31.9L52.5,31.9z"
+					/>
+			</g>
+		</g>
+	</g>
+	
+		<radialGradient id="SVGID_1_" cx="-292.1431" cy="-6559.4482" r="35.0097" gradientTransform="matrix(1 0 0 0.3159 329.4555 2158.939)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="1" style="stop-color:#000000;stop-opacity:0"/>
+	</radialGradient>
+	<ellipse class="st2" cx="37.3" cy="87.1" rx="35" ry="11.1"/>
+</g>
+</svg>

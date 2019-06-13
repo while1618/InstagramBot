@@ -1,0 +1,51 @@
+.pages-nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px 10px 0; }
+  .pages-nav a {
+    position: relative;
+    font-size: 1em;
+    padding: 10px 0;
+    margin: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    line-height: initial !important; }
+    .pages-nav a:not(.nav-register)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      height: 2px;
+      width: 100%;
+      background-color: #DB5856;
+      transform: scale(0, 1);
+      transition: all .1s linear; }
+    .pages-nav a:not(.nav-register):hover::before {
+      transform: scale(1, 1); }
+    .pages-nav a.nav-register {
+      background-color: #fff;
+      margin: 0;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: #001834; }
+
+.flip-colors .pages-nav {
+  position: relative;
+  justify-content: flex-end;
+  box-shadow: 0 3px 3px 0 rgba(51, 51, 51, 0.4); }
+  .flip-colors .pages-nav a {
+    color: #001834; }
+    .flip-colors .pages-nav a:not(.nav-register)::before {
+      background-color: #DB5856; }
+    .flip-colors .pages-nav a.nav-register {
+      background-color: #001834;
+      color: #fff; }
+
+.separate-page .pages-nav a[href='#features'],
+.separate-page .pages-nav a[href='#about'] {
+  display: none; }
+
+/*# sourceMappingURL=pages-nav.css.map */

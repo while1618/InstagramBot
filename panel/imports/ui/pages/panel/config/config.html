@@ -1,0 +1,136 @@
+<template name="ConfigTemplate">
+    <div class="panel-components config-component">
+
+        <div class="config-wrapper">
+            <div class="config-inputs">
+                <div class='config-input date' id='datetimepicker'>
+                    <input type='text' id="time" class="default-input" autocomplete="off" placeholder="Start time" data-toggle="tooltip" data-placement="top" title="Set the time when you want the bot to start working"/>
+                    <button id="saveWhenToStartBot" class="default-button">Save</button>
+                </div>
+
+                {{#if isInRole 'admin'}}
+                    <div class='config-input'>
+                        <input class="default-input" type="text" id="changeNumberOfDays" placeholder="Number of days"  data-toggle="tooltip" data-placement="top" title="Specify for how long the account will be active"><br>
+                        <button class="default-button" id="saveNumberOfDays">Save</button>
+                    </div>
+                {{/if}}
+
+                <div class="config-input">
+                    <div class="checkbox-group" style="width: 100%"  data-toggle="tooltip" data-placement="top" title="Start or pause profile on service">
+                        <span>Bot state</span>
+                        <input type="checkbox" checked="{{botState}}" id="botState" class="styled-checkbox">
+                        <label for="botState" class="toggler"></label>
+                    </div>
+                </div>
+
+                <div class="config-input">
+                    <div class="checkbox-group" style="width: 100%" data-toggle="tooltip" data-placement="top" title="Enable liking followers posts">
+                        <span>Liking</span>
+                        <input type="checkbox" checked="{{likeState}}" id="likeState" class="styled-checkbox">
+                        <label for="likeState" class="toggler"></label>
+                    </div>
+                </div>
+
+                <div class="config-input">
+                    <div class="checkbox-group" style="width: 100%">
+                        <span>Unfollow all following</span>
+                        <input type="checkbox" checked="{{allFollowingState}}" id="allFollowingState" class="styled-checkbox">
+                        <label for="allFollowingState" class="toggler"></label>
+                    </div>
+                </div>
+
+                <div class="config-input">
+                    <div class="checkbox-group" style="width: 100%">
+                        <span>Unfollow profiles who do not follow you</span>
+                        <input type="checkbox" checked="{{whoDoNotFollowYouState}}" id="whoDoNotFollowYouState" class="styled-checkbox">
+                        <label for="whoDoNotFollowYouState" class="toggler"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="splitter"><div class="line"></div></div>
+
+            {{#if Template.subscriptionsReady}}
+                <div class="config-data">
+                    <div class="data-group">
+                        <span class="data-info">When to start bot:</span>
+                        <span class="data-value">{{parseWhenToStartBotTime config.getFollowers.whenToStartBot}}</span>
+                    </div>
+
+                    <div class="data-group">
+                        <span class="data-info">Currently working:</span>
+                        <span class="data-value">{{#if config.getFollowers.currentlyWorking}}<img src="/images/active.svg" alt="">{{else}}
+                            <img src="/images/deactivated.svg" alt="">{{/if}}</span>
+                    </div>
+
+                    {{#if isInRole 'admin'}}
+                        <div class="data-group">
+                            <span class="data-info">Pause between profiles:</span>
+                            <span class="data-value svg">{{config.getFollowers.pauseBetweenProfiles}} s</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Pause between actions:</span>
+                            <span class="data-value">{{config.getFollowers.pauseBetweenActions}} s</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">How many follows:</span>
+                            <span class="data-value">{{config.getFollowers.howMuchFollows}}</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">How many follows offset:</span>
+                            <span class="data-value">{{config.getFollowers.howMuchFollowsOffset}}%</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Number of likes per profile:</span>
+                            <span class="data-value">{{config.getFollowers.numberOfLikesPerProfile}}</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">After how many days to unfollow:</span>
+                            <span class="data-value">{{config.getFollowers.afterHowManyDaysToUnfollow}}</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Pause between unfollow:</span>
+                            <span class="data-value">{{config.unfollow.pauseBetweenUnfollow}} s</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Number of unfollow per hour:</span>
+                            <span class="data-value">{{config.unfollow.numberOfUnfollowPerHour}}</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Number of unfollow per hour offset:</span>
+                            <span class="data-value">{{config.unfollow.numberOfUnfollowPerHourOffset}}%</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Pause between messages</span>
+                            <span class="data-value">{{config.message.pauseBetweenMessages}} s</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Pause between post:</span>
+                            <span class="data-value">{{config.post.pauseBetweenPost}} s</span>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-info">Pause day:</span>
+                            <span class="data-value">{{config.getFollowers.pauseDay}}</span>
+                        </div>
+                    {{/if}}
+
+                </div>
+            {{else}}
+                <div class="loader-small">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</template>

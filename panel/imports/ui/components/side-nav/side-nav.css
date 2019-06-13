@@ -1,0 +1,205 @@
+.search .profile .profile-pic {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.sidenav {
+  grid-area: sidebar;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative; }
+  .theme-light .sidenav {
+    background-image: linear-gradient(to bottom, #152234 50%, #0c1626);
+    background-color: #FCFDFD; }
+  .theme-dark .sidenav {
+    background-image: linear-gradient(to bottom, #152234 50%, #0c1626);
+    background-color: #0C1620; }
+  .sidenav .logo-and-add {
+    flex-shrink: 0;
+    padding: 0 36px 5px; }
+    .theme-light .sidenav .logo-and-add {
+      box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.15); }
+    .theme-dark .sidenav .logo-and-add {
+      box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.15); }
+    .sidenav .logo-and-add a.brand {
+      height: 65px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px; }
+      .sidenav .logo-and-add a.brand img {
+        height: 70%; }
+  .sidenav .logo {
+    border-radius: 0px;
+    width: 100%;
+    height: 90px;
+    padding: 25px;
+    margin-top: 5px; }
+  .sidenav #addProfileForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .sidenav #addProfileForm input, .sidenav #addProfileForm select {
+      width: 100%; }
+  .sidenav .default-button {
+    margin-top: 15px; }
+  .theme-light .sidenav .sidenav-select {
+    color: rgba(252, 253, 253, 0.4); }
+  .theme-dark .sidenav .sidenav-select {
+    color: rgba(252, 253, 253, 0.4); }
+  .theme-light .sidenav .sidenav-select .custom-select-value {
+    color: rgba(252, 253, 253, 0.4);
+    border-bottom: 2px solid rgba(252, 253, 253, 0.4); }
+  .theme-dark .sidenav .sidenav-select .custom-select-value {
+    color: rgba(252, 253, 253, 0.4);
+    border-bottom: 2px solid rgba(252, 253, 253, 0.4); }
+  .theme-light .sidenav .sidenav-select .custom-select-value.active-value {
+    color: #fcfdfd; }
+  .theme-dark .sidenav .sidenav-select .custom-select-value.active-value {
+    color: #fcfdfd; }
+  .theme-light .sidenav .sidenav-select .option {
+    color: #152234; }
+  .theme-dark .sidenav .sidenav-select .option {
+    color: #152234; }
+  .theme-light .sidenav .sidenav-select .option:hover {
+    color: #db5856; }
+  .theme-dark .sidenav .sidenav-select .option:hover {
+    color: #db5856; }
+  .theme-light .sidenav .default-input {
+    color: #fcfdfd;
+    border-bottom: 2px solid rgba(252, 253, 253, 0.4); }
+  .theme-dark .sidenav .default-input {
+    color: #fcfdfd;
+    border-bottom: 2px solid rgba(252, 253, 253, 0.4); }
+  .theme-light .sidenav .default-input::placeholder {
+    color: rgba(252, 253, 253, 0.4); }
+  .theme-dark .sidenav .default-input::placeholder {
+    color: rgba(252, 253, 253, 0.4); }
+  .theme-light .sidenav .default-input:focus {
+    color: #fcfdfd;
+    border-bottom: 2px solid #fcfdfd; }
+  .theme-dark .sidenav .default-input:focus {
+    color: #fcfdfd;
+    border-bottom: 2px solid #fcfdfd; }
+
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; }
+  .payment-modal .profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; }
+    .payment-modal .profile-info img {
+      background-color: #fff;
+      border-radius: 300px;
+      width: 60px;
+      height: 60px;
+      margin-right: 10px; }
+    .payment-modal .profile-info .profile-name {
+      color: #fff;
+      font-size: 20px; }
+  .payment-modal #close-payment-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer; }
+    .payment-modal #close-payment-modal img {
+      width: 20px; }
+  .payment-modal.active {
+    display: flex; }
+  .payment-modal .payment-modal-content {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px; }
+    .theme-light .payment-modal .payment-modal-content {
+      background-image: linear-gradient(to bottom right, #152234, #0c1626); }
+    .theme-dark .payment-modal .payment-modal-content {
+      background-image: linear-gradient(to bottom right, #152234, #0c1626); }
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto; }
+  .search .search-field {
+    padding: 3% 10% 8%;
+    position: relative; }
+    .theme-light .search .search-field svg .st0 {
+      fill: #152234; }
+    .theme-dark .search .search-field svg .st0 {
+      fill: #FCFDFD; }
+    .search .search-field .search-input {
+      z-index: 1;
+      width: 80%;
+      margin: 0 auto; }
+    .search .search-field .search-icon {
+      z-index: 0;
+      width: 21px;
+      position: absolute;
+      right: 56px;
+      top: 17px; }
+  .search .profile {
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .1s linear; }
+    .search .profile .profile-details {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      margin-right: 10px; }
+    .search .profile .name-and-picture {
+      display: flex;
+      align-items: center; }
+    .search .profile .name {
+      font-weight: normal;
+      max-width: 128px;
+      text-overflow: ellipsis;
+      display: inline-block;
+      overflow: hidden;
+      color: #fff; }
+    .search .profile .profile-pic {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px; }
+    .search .profile .extend-button {
+      background-color: transparent;
+      background-image: url("/images/Plus.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 15px;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      outline: none; }
+    .theme-light .search .profile:hover {
+      background-color: rgba(255, 255, 255, 0.14); }
+    .theme-dark .search .profile:hover {
+      background-color: rgba(255, 255, 255, 0.14); }
+    .theme-light .search .profile.active {
+      background-color: rgba(255, 255, 255, 0.14); }
+    .theme-dark .search .profile.active {
+      background-color: rgba(255, 255, 255, 0.14); }
+
+/*# sourceMappingURL=side-nav.css.map */

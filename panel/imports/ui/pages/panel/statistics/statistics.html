@@ -1,0 +1,63 @@
+<template name="StatisticsTemplate">
+    <div class="panel-components statistics-page">
+        <div class="filters">
+
+            <div class="data">
+                <div class="data-content from">From: <span class="value"><span class="date-value">{{fromDate}}</span><span class="time-value">{{fromTime}}</span></span></div>
+                <div class="data-content to">To: <span class="value"><span class="date-value">{{toDate}}</span><span class="time-value">{{toTime}}</span></span></div>
+            </div>
+
+            <form action="#" method="post" id="statisticsForm">
+                <div class='config-input date' id='datetimepicker'>
+                    <input type='text' id="date" value="{{currentDate}}" class="default-input" autocomplete="off" placeholder="Date"/>
+                </div>
+
+
+                <div class="custom-select-wrapper stat-filter-select">
+                    <div class="custom-select">
+                        <div class="custom-select-value panel-select active-value" data-toggle="tooltip" data-placement="top" title="Select period for statistics"><div class="value">Week</div><img src="/images/dropdown_arrow.svg" alt=""></div>
+
+                        <div class="custom-select-options">
+                            <div class="option" data-value="day">Day</div>
+                            <div class="option" data-value="week">Week</div>
+                            <div class="option" data-value="month">Month</div>
+                            <div class="option" data-value="year">Year</div>
+                        </div>
+                    </div>
+
+                    <select id="statisticsType" class="default-input">
+                        <option value="day">Day</option>
+                        <option value="week" selected>Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                    </select>
+                </div>
+            </form>
+
+        </div>
+
+
+        {{#if loading}}
+            <div class="loader-container">
+                <div class="loader-small">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+            </div>
+        {{/if}}
+
+
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="followsChart"></canvas>
+                <canvas id="unfollowsChart"></canvas>
+                <canvas id="followersChart"></canvas>
+                {{#if isInRole 'admin'}}
+                    <canvas id="followingsChart"></canvas>
+                    <canvas id="unfollowingsChart"></canvas>
+                    <canvas id="followingChart"></canvas>
+                {{/if}}
+            </div>
+        </div>
+
+    </div>
+</template>

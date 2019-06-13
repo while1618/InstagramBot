@@ -1,0 +1,25 @@
+{
+  "name": "InstagramBot",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@types/moment-timezone": "^0.5.12",
+    "bcrypt": "^3.0.3",
+    "chart.js": "^2.8.0",
+    "meteor-node-stubs": "^0.4.1",
+    "moment-timezone": "^0.5.25",
+    "simplebar": "^4.0.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.config-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0; }
+  .config-component .config-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    align-items: center;
+    justify-items: center; }
+  .config-component .config-inputs {
+    width: 300px; }
+  .config-component .config-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; }
+    .config-component .config-input .default-button, .config-component .config-input .default-input {
+      margin: 0; }
+    .config-component .config-input .default-input {
+      margin-right: 10px;
+      position: relative;
+      flex-grow: 1; }
+  .config-component .config-data {
+    font-size: 1.3em;
+    width: 80%; }
+    .config-component .config-data .data-group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0; }
+      .theme-light .config-component .config-data .data-group {
+        color: rgba(21, 34, 52, 0.75); }
+      .theme-dark .config-component .config-data .data-group {
+        color: rgba(252, 253, 253, 0.75); }
+      .config-component .config-data .data-group .data-value img {
+        height: 23px; }
+
+/*# sourceMappingURL=config.css.map */

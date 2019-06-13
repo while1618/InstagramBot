@@ -1,0 +1,119 @@
+@import "../../../../../client/stylesheets/partials/variables";
+@import "../../../../../client/stylesheets/partials/mixins";
+
+
+.statistics-page {
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+
+  .loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    @include themify($themes) {
+      background-color: themed('appColor');
+    }
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 40px;
+
+    @include themify($themes) {
+      border-bottom: 2px solid rgba(themed('generalContrastColor'),.4);
+    }
+
+    .data {
+      width: 245px;
+
+      .data-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        color: #7b838f;
+
+        .value {
+          font-size: 1.3em;
+        }
+
+        .date-value {
+          margin-right: 20px;
+          @include themify($themes) {
+            color: themed('generalContrastColor');
+          }
+        }
+        .time-value {
+          font-size: .9em;
+          @include themify($themes) {
+            color: rgba(themed('generalContrastColor'),.6);
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+
+      > * {
+        width: 200px;
+        margin: 0 20px;
+      }
+
+      input {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .charts {
+    overflow-y: auto;
+    grid-row: 2/3;
+
+    .chart-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > * {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 45%;
+        margin: 2%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  .charts {
+    .chart-container {
+      & > * {
+        max-width: 90% !important;
+        margin: 2%;
+      }
+    }
+  }
+}
+
+
+
+
+

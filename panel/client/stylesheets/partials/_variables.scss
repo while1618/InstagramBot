@@ -1,0 +1,109 @@
+$themes: (
+        light: (
+                sideNavGrad1: #152234,
+                sideNavGrad2: #0c1626,
+                sideNavInputColor: #FCFDFD,
+                mainAccentColor: #db5856,
+                profileHover: #fff,
+                buttonColor: #DB5856,
+                topNavColor: #EDEDEE,
+                appColor: #FFFFFF,
+                panelInputColor: #0c1626,
+                panelButtonHoverTextColor: #ffffff,
+                cardColor: #EDEDEE,
+                checkBoxColor: #152234,
+                generalTextColor: #152234,
+                cardTextColor: #152234,
+                generalContrastColor: #152234,
+                iconOverContrast: #FCFDFD,
+
+
+
+
+
+
+
+                panelsColor: #FCFDFD,
+                inputColor: #152234,
+                buttonTextColor: #FCFDFD,
+                navIconColor: #0E4C5C,
+                contentBoxShadow: #333,
+                contentActionsColor: #fff,
+                logoOpacity: .39,
+                logoFill: #0E4C5C,
+        ),
+        dark: (
+                sideNavGrad1: #152234,
+                sideNavGrad2: #0c1626,
+                sideNavInputColor: #FCFDFD,
+                mainAccentColor: #db5856,
+                profileHover: #fff,
+                buttonColor: #db5856,
+                topNavColor: #152234,
+                appColor: #0c1626,
+                panelInputColor: #FFFFFF,
+                panelButtonHoverTextColor: #ffffff,
+                cardColor: #152234,
+                checkBoxColor: #ffffff,
+                generalTextColor: #FCFDFD,
+                cardTextColor: #FCFDFD,
+                generalContrastColor: #FCFDFD,
+                iconOverContrast: #152234,
+
+
+
+
+
+
+
+
+
+                panelsColor: #0C1620,
+                inputColor: #1CAECB,
+                buttonTextColor: #fff,
+                navIconColor: #fff,
+                contentBoxShadow: #65A6B3,
+                contentActionsColor: #0C1620,
+                logoOpacity: 1,
+                logoFill: #fff
+        ),
+);
+
+$animated-images-positions: (
+        p-0: 30%,
+        p-1: 80%,
+        p-2: 50%,
+        p-3: 60%,
+        p-4: 45%,
+        p-5: 90%,
+        p-6: 20%,
+        p-7: 10%,
+        p-8: 70%
+);
+
+$images-length: 8;
+
+$mainYellow: #F3B41B;
+$mainGreen: #0B9D58;
+$mainRed: #DB5856;
+$mainAccent: #DB5856;
+$paleWhite: #FCFDFD;
+$transparentWhite: #636d79;
+
+$signupGrad1: #001834;
+$signupGrad2: #0B091C;
+$darkBlueOpacity04: #7b838f;
+
+$generalTextColor: #152234;
+
+
+$nav-height: 65px;
+$sideNav-width: 300px;
+$sideNav-input-width: 80%;
+$profile-pic-size: 35px;
+$nav-pic-size: 30px;
+$standard-nav-shadow: 0 0 5px 1px rgba(#000, .5);
+
+$chartGradient1: #F69254;
+$chartGradient2: #EE575C;
+$chartGradient1: #CB4B85;

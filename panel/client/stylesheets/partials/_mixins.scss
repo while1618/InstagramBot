@@ -1,0 +1,47 @@
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+%radius-50 {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+%content-box {
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+
+  border-radius: 10px;
+
+  @include themify($themes) {
+    color: themed('cardTextColor') !important;
+    background-color: themed('cardColor') !important;
+    box-shadow: 0 0 5px 3px rgba(#000, .3) !important;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 20px 0 rgba(#000, .3) !important;
+  }
+}

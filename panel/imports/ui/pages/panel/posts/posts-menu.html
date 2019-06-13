@@ -1,0 +1,11 @@
+<template name="PostsMenuTemplate">
+    <div class="panel-components posts">
+        {{#if $eq postSection 'timeline'}}
+            {{> TimelineTemplate}}
+        {{else if $eq postSection 'story'}}
+            {{> StoryTemplate}}
+        {{else}}
+            {{pageNotFound}}
+        {{/if}}
+    </div>
+</template>

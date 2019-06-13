@@ -1,0 +1,17 @@
+<template name="PagesNavTemplate">
+    <nav class="pages-nav">
+        <a href="/landing">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="/pricing">Pricing</a>
+        <a href="#">FAQ</a>
+        <a href="/guides">Guides</a>
+        {{#if currentUser }}
+            <a href="/get-followers" class="nav-login">Dashboard</a>
+            <a href="#" id="logout">Sign Out</a>
+        {{else}}
+            <a href="/login" class="nav-login">Login</a>
+        {{/if}}
+        <a href="/sign-up" class="nav-register">Register</a>
+    </nav>
+</template>

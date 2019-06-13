@@ -1,0 +1,13 @@
+<template name="MessagesMenuTemplate">
+    <div class="panel-components messages">
+        {{#if $eq messageSection 'messages'}}
+            {{> MessagesTemplate}}
+        {{else if $eq messageSection 'users-groups'}}
+            {{> UsersGroupsTemplate}}
+        {{else if $eq messageSection 'when-followed'}}
+            {{> WhenFollowedTemplate}}
+        {{else}}
+            {{pageNotFound}}
+        {{/if}}
+    </div>
+</template>

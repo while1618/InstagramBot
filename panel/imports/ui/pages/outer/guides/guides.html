@@ -1,0 +1,73 @@
+<template name="GuidesTemplate">
+
+    <div class="guides-wrapper">
+        <div class="guides-side-panel">
+            <a href="/landing" class="logo"><img src="/images/logos/logo_big_color.svg" alt=""></a>
+            <div class="guides-navigation">
+                <div class="navigation-item">
+                    <div class="gn-main-section">
+                        <img src="/images/get_followers.svg" alt="" class="gnms-image svg-icon">
+                        <div class="gnms-text">Followers</div>
+                        <img src="/images/dropdown_arrow.svg" alt="" class="arrow svg-icon  active">
+                    </div>
+                    <div class="gn-expand-section active">
+                        <a href="#">- Add target</a>
+                        <a href="#">- Pause target</a>
+                        <a href="#">- Delete target</a>
+                    </div>
+                </div>
+
+                <div class="navigation-item">
+                    <div class="gn-main-section">
+                        <img src="/images/messages.svg" alt="" class="gnms-image svg-icon">
+                        <div class="gnms-text">Messaging</div>
+                        <img src="/images/dropdown_arrow.svg" alt="" class="arrow svg-icon">
+                    </div>
+                    <div class="gn-expand-section">
+                        <a href="#">- Add target</a>
+                        <a href="#">- Pause target</a>
+                        <a href="#">- Delete target</a>
+                    </div>
+                </div>
+
+                <div class="navigation-item">
+                    <div class="gn-main-section">
+                        <img src="/images/add_post.svg" alt="" class="gnms-image svg-icon">
+                        <div class="gnms-text">Post Scheduling</div>
+                        <img src="/images/dropdown_arrow.svg" alt="" class="arrow svg-icon">
+                    </div>
+                    <div class="gn-expand-section">
+                        <a href="#">- Add target</a>
+                        <a href="#">- Pause target</a>
+                        <a href="#">- Delete target</a>
+                    </div>
+                </div>
+
+                <div class="navigation-item">
+                    <div class="gn-main-section">
+                        <img src="/images/statistics.svg" alt="" class="gnms-image svg-icon">
+                        <div class="gnms-text">Statistics</div>
+                        <img src="/images/dropdown_arrow.svg" alt="" class="arrow svg-icon">
+                    </div>
+                    <div class="gn-expand-section">
+                        <a href="#">- Add target</a>
+                        <a href="#">- Pause target</a>
+                        <a href="#">- Delete target</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guides-contents">
+            <div class="flip-colors separate-page">
+                {{> PagesNavTemplate}}
+            </div>
+
+            <div class="guides-contents-section">
+
+            </div>
+        </div>
+    </div>
+
+
+
+</template>

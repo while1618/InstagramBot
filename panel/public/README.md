@@ -1,0 +1,1 @@
+All files inside a top-level directory called `public/` are served as-is to the client. When referencing these assets, do not include `public/` in the URL, write the URL as if they were all in the top level. For example, reference public/bg.png. This is the best place for favicon.ico, robots.txt, and similar files.

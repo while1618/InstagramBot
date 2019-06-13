@@ -1,0 +1,31 @@
+<template name="SignUpTemplate">
+    <div class="side-page-wrapper theme-light">
+        {{> SidePageTemplate}}
+
+        <div class="side-pages-form">
+            <form action="#" method="post" id="signUpForm">
+                <h1>Register</h1>
+
+                <input type="text" id="firstName" class="default-input" placeholder="First Name:">
+                <div class="error">{{errors.firstNameError}}</div>
+                <input type="text" id="lastName" class="default-input" placeholder="Last Name:">
+                <div class="error">{{errors.lastNameError}}</div>
+                <input type="text" id="username" class="default-input" placeholder="Username:">
+                <div class="error">{{errors.usernameError}}</div>
+                <input type="email" id="email" class="default-input" placeholder="Email:">
+                <div class="error">{{errors.emailError}}</div>
+                <input type="text" id="phoneNumber" class="default-input" placeholder="Phone Number:">
+                <div class="error">{{errors.phoneNumberError}}</div>
+                <input type="password" id="password" class="default-input" placeholder="Password:">
+                <input type="password" id="repeatPassword" class="default-input" placeholder="Repeat Password:">
+                <div class="error">{{errors.passwordError}}</div>
+                <p style="text-align: center">
+                    <button type="submit" class="default-button">Sign Up</button>
+                </p>
+                <p class="already-have">
+                    Already have an account? <a href="/login">Sign in.</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</template>

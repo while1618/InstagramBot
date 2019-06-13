@@ -1,0 +1,7 @@
+.showResendVerificationEmailButton {
+    display: block;
+}
+
+.hideResendVerificationEmailButton {
+    display: none;
+}

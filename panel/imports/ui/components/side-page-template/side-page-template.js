@@ -1,0 +1,1 @@
+import './side-page-template.html';

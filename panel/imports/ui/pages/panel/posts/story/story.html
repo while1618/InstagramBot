@@ -1,0 +1,150 @@
+<template name="StoryTemplate">
+    <div class="panel-components all-posts">
+        <div class="post-entry">
+            <div class="posts-navigation">
+                <a href="/posts-menu/timeline" class="nav-item">
+                <span class="image-wrapper">
+                    <img src="/images/add_post.svg" class="svg-icon" alt="">
+                </span>
+                    <span>Timeline</span>
+                </a>
+                <a href="/posts-menu/story" class="nav-item active">
+                <span class="image-wrapper">
+                    <img src="/images/story_icon.svg" class="svg-icon" alt="">
+                </span>
+                    <span>Story</span>
+                </a>
+            </div>
+
+            <div class="post-entry-wrapper">
+                <form action="#" method="post" id="storyForm">
+                    <div class='input-group date' id='datetimepicker'>
+                        <input type='text' id="whenToPost" placeholder="Time & Date" class="default-input"
+                               autocomplete="off"/>
+                    </div>
+                    <div class="error">{{errors.notValidDate}}</div>
+
+                    <div class="default-dropzone" data-toggle="tooltip" data-placement="top" title="Upload an image or a video that you want to post">
+                        <input type="file" id="fileInput"/>
+                        <div class="content">
+                            <img src="/images/upload.svg" class="svg-icon" alt="">
+                            <div id="file-name">No file chosen</div>
+                        </div>
+                    </div>
+                    <div class="error">{{errors.notValidFile}}</div>
+                    {{#with currentUpload}}
+                        <div class="upload-loader">
+                            <span class="description">{{file.name}}</span>
+                            <div class="c-progress">
+                                <div class="c-progress-bar" style="width: {{progress.get}}%"></div>
+                            </div>
+                        </div>
+                    {{/with}}
+                    <button type="submit" class="default-button">Add Post</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="splitter">
+            <div class="line"></div>
+        </div>
+        {{#if Template.subscriptionsReady}}
+            <div class="posts">
+                <div class="filters">
+                    <div class="custom-select-wrapper story-filter-select">
+                        <div class="custom-select">
+                            <div class="custom-select-value panel-select" data-toggle="tooltip" data-placement="top" title="Time filter"><div class="value">Time filter</div><img src="/images/dropdown_arrow.svg" alt=""></div>
+
+                            <div class="custom-select-options">
+                                <div class="option" data-value="firstToPost">First to post</div>
+                                <div class="option" data-value="lastToPost">Last to post</div>
+                            </div>
+                        </div>
+
+                        <select id="timeFilter">
+                            <option value="firstToPost">First to post</option>
+                            <option value="lastToPost">Last to post</option>
+                        </select>
+                    </div>
+                </div>
+
+                {{#each posts}}
+                    <div class="post story">
+                        <div class="post-content">
+                            <div class="post-header">
+                                <div class="post-data">
+                                    <div class="post-date">{{parsePostDate}}</div>
+                                    <div class="post-time">{{parsePostTime}}</div>
+                                </div>
+                            </div>
+
+                            <div class="post-body">
+                                {{#with getFile}}
+                                    {{#if isImage}}
+                                        <img src="{{link}}" alt="postImage" class="post-image">
+                                    {{/if}}
+                                    {{#if isVideo}}
+                                        <video width="320" height="240">
+                                            <source src="{{link}}" type="video/mp4">
+                                        </video>
+                                    {{/if}}
+                                {{/with}}
+                            </div>
+                        </div>
+
+                        <div class="post-actions">
+                            <button id="preview"><img src="/images/view.svg" alt=""></button>
+                            <button id="delete"><img src="/images/trash.svg" class="trash-icon" alt=""></button>
+                        </div>
+                    </div>
+
+
+                    <div class="custom-post-modal">
+                        <div class="modal-content story">
+                            <div class="custom-modal-header">
+
+                                <div class="date">{{parsePostDate}} {{parsePostTime}}</div>
+
+                                <div class="close-wrapper">
+                                    <div class="close-modal">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 22.8 22.8" style="enable-background:new 0 0 22.8 22.8;"
+                                             xml:space="preserve">
+    <style type="text/css">
+        .st0 {
+            opacity: 0.4;
+            fill: #0E4C5C;
+        }
+    </style>
+                                            <polygon class="st0" points="20.6,3.5 19.3,2.3 11.4,10.1 3.5,2.3 2.3,3.5 10.1,11.4 2.3,19.3 3.5,20.6 11.4,12.7 19.3,20.6
+        20.6,19.3 12.7,11.4 "/>
+    </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="custom-modal-body">
+                                {{#with getFile}}
+                                    {{#if isImage}}
+                                        <img src="{{link}}" alt="postImage" class="post-image">
+                                    {{/if}}
+                                    {{#if isVideo}}
+                                        <video width="320" height="240" controls>
+                                            <source src="{{link}}" type="video/mp4">
+                                        </video>
+                                    {{/if}}
+                                {{/with}}
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{else}}
+            <div class="loader-small">
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+        {{/if}}
+    </div>
+
+</template>

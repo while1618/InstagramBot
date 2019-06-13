@@ -1,0 +1,118 @@
+<template name="PricingTemplate">
+    <div class="side-page-wrapper landing-page">
+
+        <div class="details">
+            <div class="separate-page">
+                {{> PagesNavTemplate}}
+            </div>
+
+            <img src="/images/side_pages/coment_balloon.svg" alt="" class="animated-image am0"
+                 style="width: 120px; left: 15%">
+            <img src="/images/side_pages/coment_balloon.svg" alt="" class="animated-image am1"
+                 style="width: 80px; left: 60%">
+            <img src="/images/side_pages/coment_balloon.svg" alt="" class="animated-image am2"
+                 style="width: 60px; left: 80%">
+
+            <img src="/images/side_pages/follower_ballon.svg" alt="" class="animated-image am3"
+                 style="width: 60px; left: 12%">
+            <img src="/images/side_pages/follower_ballon.svg" alt="" class="animated-image am4"
+                 style="width: 100px; left: 72%">
+            <img src="/images/side_pages/follower_ballon.svg" alt="" class="animated-image am5"
+                 style="width: 80px; left: 45%">
+
+            <img src="/images/side_pages/like_balloon.svg" alt="" class="animated-image am6" style="width: 140px; left: 18%">
+            <img src="/images/side_pages/like_balloon.svg" alt="" class="animated-image am7" style="width: 40px; left: 50%">
+            <img src="/images/side_pages/like_balloon.svg" alt="" class="animated-image am8" style="width: 70px; left: 90%">
+
+            <img src="/images/side_pages/home_icon.svg" alt="" class="stationary-image"
+                 style="width: 120px; left: 75%; top: 60%;">
+            <img src="/images/side_pages/home_icon.svg" alt="" class="stationary-image"
+                 style="width: 60px; left: 20%; top: 15%;">
+            <img src="/images/side_pages/search_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 30%; top: 45%;">
+            <img src="/images/side_pages/search_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 50%; top: 80%;">
+            <img src="/images/side_pages/comment_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 15%; top: 85%;">
+            <img src="/images/side_pages/heart_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 10%; top: 50%;">
+            <img src="/images/side_pages/user_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 80%; top: 20%;">
+            <img src="/images/side_pages/comment_icon.svg" alt="" class="stationary-image"
+                 style="width: 30px; left: 40%; top: 15%;">
+            <img src="/images/side_pages/post_icon.svg" alt="" class="stationary-image"
+                 style="width: 60px; left: 90%; top: 5%;">
+            <img src="/images/side_pages/post_icon.svg" alt="" class="stationary-image"
+                 style="width: 100px; left: 75%; top: 93%;">
+
+
+            <div class="pricing-page-wrapper">
+                <h2>Select package</h2>
+                <div class="packages">
+                    <div class="package">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">1</div>
+                                <div class="duration-description">month</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package middle">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">3</div>
+                                <div class="duration-description">months</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">6</div>
+                                <div class="duration-description">months</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    With every package you will gain access to all of the panel features, including Target following, Statistics, Post Scheduling and Message sending.
+                </p>
+                <button id="freeTrail" class="default-button landing-default-link">Start now</button>
+                <span>3 day free trial</span>
+            </div>
+
+            <div class="logo">
+                <span>powered by: </span>
+                <!--            TODO:-->
+                <a href="https://www.your-site.com"><img src="/images/rfl_logo_large.svg" alt=""></a>
+            </div>
+
+            {{#if loading}}
+                <div class="loader"><svg>
+                    <g>
+                        <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+                    </g>
+                    <g>
+                        <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg></div>
+            {{/if}}
+        </div>
+    </div>
+</template>

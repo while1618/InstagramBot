@@ -1,0 +1,64 @@
+<template name="InstagramLoginTemplate">
+    <div class="side-page-wrapper theme-light">
+        {{> SidePageTemplate}}
+
+        <div class="side-pages-form">
+
+            <form action="#" id="instagramLoginForm" method="post">
+                <h1 style="margin-bottom: 10px">
+                    Add instagram account
+                </h1>
+                <p class="form-description">
+                    Please log in to your instagram account to proceed.
+                </p>
+
+                <input type="text" id="username" placeholder="Username:" class="default-input">
+                <div class="error">{{errors.usernameError}}</div>
+                <div class="error">{{errors.instagramProfileAlreadyExistsError}}</div>
+                <input type="password" id="password" placeholder="Password:" class="default-input">
+                <div class="error">{{errors.passwordError}}</div>
+                <div class="error">{{errors.proxyError}}</div>
+                <div class="error">{{errors.freeTrailError}}</div>
+                <div class="error">{{errors.instagramTokenError}}</div>
+                <div class="custom-select-wrapper sidenav-select">
+                    <div class="custom-select">
+                        <div class="custom-select-value" data-toggle="tooltip" data-placement="top" title="Describe for how long the Instagram profile has been active"><div class="value">How long the profile exists</div><img src="/images/dropdown_arrow.svg" alt=""></div>
+
+                        <div class="custom-select-options">
+                            <div class="option" data-value="lessThanMonth">Less than month</div>
+                            <div class="option" data-value="betweenOneAndThree">Between one and three months</div>
+                            <div class="option" data-value="moreThenThree">More than three months</div>
+                        </div>
+                    </div>
+
+                    <select id="howLongProfileExists">
+                        <option value="lessThanMonth">Less than month</option>
+                        <option value="betweenOneAndThree">Between one and three month</option>
+                        <option value="moreThenThree">More than three month</option>
+                    </select>
+                </div>
+
+                <div class="error">{{errors.howLongProfileExistsError}}</div>
+                <p style="text-align: center">
+                    <button type="submit" class="default-button">Login</button>
+                </p>
+                {{#if loading}}
+                    <div class="loader"><svg>
+  <g>
+    <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+  </g>
+  <g>
+    <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+  </g>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg></div>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</template>

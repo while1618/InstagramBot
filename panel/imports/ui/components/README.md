@@ -1,0 +1,1 @@
+Inside components create reusable parts off app (like nav menu)

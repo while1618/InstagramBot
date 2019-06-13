@@ -1,0 +1,38 @@
+<template name="IsThisYouTemplate">
+    <div class="side-page-wrapper theme-light">
+        {{> SidePageTemplate}}
+
+        <div class="side-pages-form">
+            <h1 style="margin-bottom: 0">Is this you?</h1>
+            <p class="form-description">
+                Please confirm your account
+            </p>
+            {{#if loading}}
+                <div class="loader"><svg>
+  <g>
+    <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+  </g>
+  <g>
+    <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+  </g>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg></div>
+            {{/if}}
+            <div class="form-content">
+                <div class="profile-data">
+                    <img src="{{profilePic}}">
+                    <span class="username">{{username}}</span>
+                </div>
+                <div class="buttons">
+                    <button id="no" class="default-button">No</button>
+                    <button id="yes" class="default-button">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

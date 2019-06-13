@@ -1,0 +1,130 @@
+<template name="SideNavTemplate">
+    <div class="sidenav">
+        <div class="logo-and-add">
+            <a href="/landing" class="brand">
+                <img src="/images/logos/logo_big_color.svg" alt="">
+            </a>
+            <div class="add-profile">
+                <form action="#" method="post" id="addProfileForm">
+                    {{#if isInRole 'admin'}}
+                        <input type="text" id="username" class="default-input" placeholder="Username:"
+                               autocomplete="off" data-toggle="tooltip" data-placement="top"
+                               title="Username of instagram profile you want to add">
+                        <div class="error">{{errors.usernameError}}</div>
+                        <input type="text" id="numberOfDays" class="default-input" placeholder="Number Of Days:"
+                               autocomplete="off" data-toggle="tooltip" data-placement="top"
+                               title="Specify for how long account will be active">
+                        <div class="error">{{errors.numberError}}</div>
+                    {{/if}}
+                    <button type="submit" class="default-button">Add New Profile</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="search" data-simplebar>
+            <div class="search-field">
+                <input class="default-input search-input" type="text" id="search" autocomplete="off"
+                       placeholder="Search:">
+                <img class="search-icon" src="/images/search.svg" alt="">
+            </div>
+            <div class="profiles">
+                {{#each profiles}}
+                    {{> profile}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="payment-modal">
+            <div class="payment-modal-content">
+                <div id="close-payment-modal">
+                    <img src="/images/iks.svg" alt="">
+                </div>
+                <div class="profile-info">
+                    {{#with extendDaysProfilePic}}
+                        <img src="{{link}}" class="profile-pic" alt="profilePic">
+                    {{/with}}
+                    <div class="profile-name">{{extendDaysProfile.instagramData.instagramUsername}}</div>
+                </div>
+                <div class="packages">
+                    <div class="package">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">1</div>
+                                <div class="duration-description">month</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                        <button class="pay default-button" data-package-time="30">Choose</button>
+                    </div>
+                    <div class="package middle">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">3</div>
+                                <div class="duration-description">months</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                        <button class="pay default-button" data-package-time="90">Choose</button>
+                    </div>
+                    <div class="package">
+                        <div class="package-info">
+                            <div class="duration">
+                                <div class="duration-number">6</div>
+                                <div class="duration-description">months</div>
+                            </div>
+                            <div class="price">
+                                <div class="price-amount">N/A</div>
+                            </div>
+                        </div>
+                        <button class="pay default-button" data-package-time="180">Choose</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#if loading}}
+            <div class="loader">
+                <svg>
+                    <g>
+                        <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+                    </g>
+                    <g>
+                        <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1"/>
+                            <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        {{/if}}
+    </div>
+</template>
+
+<template name="profile">
+    <div class="profile {{#if isProfileSelected}}active{{/if}}">
+        <div class="profile-details">
+            <div class="name-and-picture">
+                {{#with getFile}}
+                    <img src="{{link}}" class="profile-pic" alt="profilePic">
+                {{/with}}
+                <span class="name">
+                    {{instagramData.instagramUsername}}
+                </span>
+            </div>
+            <div class="days-remaining" style="color: {{daysColor config.profile.numberOfDays}}">
+                {{#if $gte config.profile.numberOfDays 0}}
+                    {{config.profile.numberOfDays}}d
+                {{else}}
+                    0d
+                {{/if}}
+            </div>
+        </div>
+        <button id="extendDays" class="extend-button"></button>
+    </div>
+</template>
+

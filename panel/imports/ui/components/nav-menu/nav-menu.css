@@ -1,0 +1,128 @@
+.nav-menu .profile .profile-pic {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.nav-menu {
+  grid-area: topnav;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px; }
+  .theme-light .nav-menu {
+    box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    background-color: #EDEDEE; }
+  .theme-dark .nav-menu {
+    box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4);
+    background-color: #152234; }
+  .nav-menu > * {
+    flex-basis: 0;
+    flex-grow: 1; }
+  .nav-menu .profile-selected {
+    display: flex;
+    align-items: center;
+    font-weight: normal; }
+  .theme-light .nav-menu .profile {
+    color: #152234; }
+  .theme-dark .nav-menu .profile {
+    color: #FCFDFD; }
+  .nav-menu .profile .profile-pic {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px 0 15px; }
+  .nav-menu .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .nav-menu .navigation a {
+      margin: 0 5px; }
+      .nav-menu .navigation a svg {
+        width: 30px;
+        height: 30px;
+        transition: all .15s linear; }
+        .nav-menu .navigation a svg .st0 {
+          opacity: 1;
+          transition: all 0.15s linear; }
+          .theme-light .nav-menu .navigation a svg .st0 {
+            fill: rgba(14, 76, 92, 0.5); }
+          .theme-dark .nav-menu .navigation a svg .st0 {
+            fill: rgba(255, 255, 255, 0.5); }
+      .theme-light .nav-menu .navigation a:hover svg .st0 {
+        fill: #0e4c5c; }
+      .theme-dark .nav-menu .navigation a:hover svg .st0 {
+        fill: white; }
+      .nav-menu .navigation a.active svg {
+        width: 37px;
+        height: 37px; }
+        .theme-light .nav-menu .navigation a.active svg .st0 {
+          fill: #0e4c5c; }
+        .theme-dark .nav-menu .navigation a.active svg .st0 {
+          fill: white; }
+  .nav-menu .actions-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    align-self: stretch; }
+  .nav-menu .actions {
+    cursor: pointer;
+    padding: 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .theme-light .nav-menu .actions {
+      color: #152234; }
+    .theme-dark .nav-menu .actions {
+      color: #FCFDFD; }
+    .theme-light .nav-menu .actions:hover {
+      background-color: rgba(21, 34, 52, 0.2); }
+    .theme-dark .nav-menu .actions:hover {
+      background-color: rgba(252, 253, 253, 0.2); }
+    .theme-light .nav-menu .actions.menu-active {
+      background-color: rgba(21, 34, 52, 0.2); }
+    .theme-dark .nav-menu .actions.menu-active {
+      background-color: rgba(252, 253, 253, 0.2); }
+    .nav-menu .actions svg {
+      width: 15px;
+      height: auto;
+      margin-left: 5px; }
+      .theme-light .nav-menu .actions svg .st0 {
+        opacity: 0.39;
+        fill: #152234; }
+      .theme-dark .nav-menu .actions svg .st0 {
+        opacity: 1;
+        fill: #FCFDFD; }
+    .nav-menu .actions .actions-menu {
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%); }
+      .theme-light .nav-menu .actions .actions-menu {
+        box-shadow: 0 5px 10px 0 rgba(51, 51, 51, 0.3);
+        background-color: #FCFDFD; }
+      .theme-dark .nav-menu .actions .actions-menu {
+        box-shadow: 0 5px 10px 0 rgba(101, 166, 179, 0.3);
+        background-color: #0C1620; }
+      .nav-menu .actions .actions-menu.show-menu {
+        display: flex !important; }
+      .nav-menu .actions .actions-menu > * {
+        transition: all .1s linear;
+        text-decoration: none;
+        padding: 15px 20px; }
+        .theme-light .nav-menu .actions .actions-menu > * {
+          color: #152234; }
+        .theme-dark .nav-menu .actions .actions-menu > * {
+          color: #FCFDFD; }
+        .theme-light .nav-menu .actions .actions-menu > *:hover {
+          background-color: rgba(21, 34, 52, 0.2); }
+        .theme-dark .nav-menu .actions .actions-menu > *:hover {
+          background-color: rgba(252, 253, 253, 0.2); }
+      .nav-menu .actions .actions-menu #logout {
+        color: #DB5856;
+        text-decoration: none; }
+
+/*# sourceMappingURL=nav-menu.css.map */

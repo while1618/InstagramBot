@@ -1,0 +1,239 @@
+@import "../../../../../client/stylesheets/partials/variables";
+@import "../../../../../client/stylesheets/partials/mixins";
+
+.get-followers-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1px 2fr;
+  position: relative;
+
+  .target-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #targetUsername {
+      min-width: 300px;
+      font-size: 1.25em;
+      margin-bottom: 25px;
+    }
+  }
+
+  .target-settings {
+    font-size: 1.25em;
+
+    .checkbox-group {
+      margin: 5px 0;
+    }
+
+    span {
+      @include themify($themes) {
+        color: rgba(themed('generalContrastColor'), .7);
+      }
+    }
+  }
+
+
+  .targets {
+    padding: 30px 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - 90px) / 4));
+    grid-auto-rows: min-content;
+    grid-gap: 30px;
+
+    overflow-y: auto;
+
+    .target {
+      &:hover {
+        @include themify($themes) {
+          box-shadow: 0 10px 20px 0 rgba(#000, .3);
+        }
+      }
+    }
+
+    .modal-content {
+      min-width: 350px;
+      .target-username {
+        max-width: none !important;
+      }
+    }
+
+    .target, .modal-content {
+      @extend %content-box;
+      padding: 10px;
+      position: relative;
+
+      .target-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .target-info {
+        display: flex;
+        align-items: center;
+      }
+      .target-picture {
+        width: 30px;
+        height: 30px;
+        @extend %radius-50;
+      }
+      .target-username {
+        font-weight: normal;
+        margin-left: 5px;
+        max-width: 116px;
+
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @include themify($themes) {
+          color: themed('cardTextColor');
+        }
+      }
+      .target-actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        @include themify($themes) {
+          background-color: transparent;
+        }
+
+        transition: all .2s linear;
+        border-radius: 10px;
+
+        button {
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          @extend %radius-50;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+
+          transition: all .10s linear;
+
+          &:hover {
+            @include themify($themes) {
+              // TODO: Add new hover effects
+            }
+
+            img {
+              transform: scale(1.2);
+            }
+
+          }
+
+          outline: none;
+
+          //&.play-pause {
+          //  @include themify($themes) {
+          //    background-color: themed('buttonColor');
+          //  }
+          //}
+          //&#delete {
+          //  background-color: $mainRed;
+          //}
+          //
+          //&#preview {
+          //  background-color: map_get(map_get($themes, 'light'), 'inputColor');;
+          //}
+
+          img {
+            transition: all .1s linear;
+            width: 30px;
+          }
+        }
+      }
+
+      .target-body {
+        width: 75%;
+        margin: 20px auto 10px 20px;
+
+        .target-body-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 3px 0;
+
+          .target-info-type {
+            @include themify($themes) {
+              color: rgba(themed('cardTextColor'), .7);
+            }
+          }
+
+          .target-info-value {
+            font-weight: normal;
+
+            @include themify($themes) {
+              color: themed('cardTextColor');
+            }
+          }
+
+          &.validated {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .custom-target-modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+
+      @include themify($themes) {
+        background-color: rgba(themed('contentActionsColor'), .7);
+      }
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      &.active {
+        display: flex;
+      }
+
+      .modal-content {
+        @extend %content-box;
+        border: none;
+
+        .target-body {
+          margin: 20px auto;
+        }
+      }
+    }
+  }
+
+  .is-working {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 2190px) {
+  .get-followers-wrapper {
+    .targets {
+      grid-template-columns: repeat(3, calc((100% - 60px) / 3));
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .get-followers-wrapper {
+    .targets {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+}

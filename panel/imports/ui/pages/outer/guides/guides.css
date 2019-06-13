@@ -1,0 +1,83 @@
+.guides-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh; }
+  .guides-wrapper .guides-side-panel {
+    grid-column: 1/2;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom right, #001834, #0B091C); }
+    .guides-wrapper .guides-side-panel .logo {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none; }
+      .guides-wrapper .guides-side-panel .logo img {
+        height: 70%; }
+    .guides-wrapper .guides-side-panel .guides-navigation {
+      margin-top: 25%;
+      display: flex;
+      flex-direction: column; }
+      .guides-wrapper .guides-side-panel .guides-navigation .navigation-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 10px;
+        overflow: hidden; }
+        .guides-wrapper .guides-side-panel .guides-navigation .navigation-item:last-child {
+          border-bottom: none; }
+        .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-main-section {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          cursor: pointer;
+          padding: 10px 0; }
+          .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-main-section .gnms-image {
+            height: 40px;
+            margin-right: 10px; }
+          .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-main-section .gnms-text {
+            font-size: 1.3em;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif; }
+          .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-main-section .arrow {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 20px; }
+            .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-main-section .arrow.active {
+              transform: translateY(-50%) rotateZ(180deg); }
+        .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-expand-section {
+          margin: 0 auto;
+          font-size: 1em;
+          flex-direction: column;
+          display: none;
+          padding-bottom: 10px; }
+          .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-expand-section.active {
+            display: flex !important; }
+          .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-expand-section a {
+            text-decoration: none;
+            padding: 5px 0;
+            color: rgba(255, 255, 255, 0.4); }
+            .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-expand-section a.active, .guides-wrapper .guides-side-panel .guides-navigation .navigation-item .gn-expand-section a:hover {
+              color: #fff; }
+  .guides-wrapper svg .st0 {
+    fill: #fff; }
+  .guides-wrapper .guides-contents {
+    position: relative;
+    z-index: 1;
+    grid-column: 2/3;
+    grid-row: 1;
+    overflow-y: hidden; }
+    .guides-wrapper .guides-contents .guides-contents-section {
+      height: 100%;
+      overflow-y: auto; }
+    .guides-wrapper .guides-contents .app-navigation {
+      height: 65px; }
+
+/*# sourceMappingURL=guides.css.map */

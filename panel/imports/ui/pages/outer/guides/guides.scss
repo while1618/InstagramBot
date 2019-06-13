@@ -1,0 +1,132 @@
+@import "../../../../../client/stylesheets/partials/variables";
+@import "../../../../../client/stylesheets/partials/mixins";
+
+$mainAccent: #DB5856;
+
+
+.guides-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+
+  .guides-side-panel {
+    grid-column: 1/2;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;
+
+    background-image: linear-gradient(to bottom right, $signupGrad1, $signupGrad2);
+
+    .logo {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+      img {
+        height: 70%;
+      }
+    }
+
+    .guides-navigation {
+      margin-top: 25%;
+      display: flex;
+      flex-direction: column;
+
+      .navigation-item {
+        border-bottom: 1px solid rgba(#fff, .1);
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 10px;
+        overflow: hidden;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .gn-main-section {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          cursor: pointer;
+
+          padding: 10px 0;
+
+          .gnms-image {
+            height: 40px;
+            margin-right: 10px;
+          }
+
+          .gnms-text {
+            font-size: 1.3em;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+          }
+
+          .arrow {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 20px;
+
+            &.active {
+              transform: translateY(-50%) rotateZ(180deg);
+            }
+          }
+        }
+
+
+        .gn-expand-section {
+          margin: 0 auto;
+          font-size: 1em;
+          flex-direction: column;
+          display: none;
+          padding-bottom: 10px;
+
+          &.active {
+            display: flex !important;
+          }
+
+          a {
+            text-decoration: none;
+            padding: 5px 0;
+            color: rgba(#fff, .4);
+
+            &.active,
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  svg {
+    .st0 {
+      fill: #fff;
+    }
+  }
+
+  .guides-contents {
+    position: relative;
+    z-index: 1;
+    grid-column: 2/3;
+    grid-row: 1;
+    overflow-y: hidden;
+
+    .guides-contents-section {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .app-navigation {
+      height: 65px;
+    }
+  }
+}
