@@ -10,7 +10,7 @@ Panel design: Nikola Petrovic
 This project was developed exclusively for the purposes of learning and any kind of use of the software for spam purposes is not allowed.
 
 ### API
-This project use unofficial private Instagram api created by @mgp25. [api](https://github.com/NVukobrat/GANs-Indoor-Scene-Recognition)
+This project use unofficial private Instagram [api](https://github.com/NVukobrat/GANs-Indoor-Scene-Recognition) created by @mgp25. 
 
 ## What it does?
 ### Followers
