@@ -1,8 +1,8 @@
 # InstagramBot
 
 ### Contributors
-Bot: @while1618 and [@NVukobrat](https://github.com/NVukobrat) 
-Panel back-end: @while1618  
+Bot: [@while1618](https://github.com/while1618) and [@NVukobrat](https://github.com/NVukobrat)  
+Panel back-end: [@while1618](https://github.com/while1618)
 Panel front-end: @zicru  
 Panel design: Nikola Petrovic  
 
