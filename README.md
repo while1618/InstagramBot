@@ -9,6 +9,9 @@ Panel design: Nikola Petrovic
 ### IMPORTANT!
 This project was developed exclusively for the purposes of learning and any kind of use of the software for spam purposes is not allowed.
 
+### API
+This project use unofficial private Instagram api created by @mgp25. [api](https://github.com/NVukobrat/GANs-Indoor-Scene-Recognition)
+
 ## What it does?
 ### Followers
 * Pick target and software will start to follow followers of target you picked. After one day they will be unfollowed. So you get new followers really fast and left your profile clean.
