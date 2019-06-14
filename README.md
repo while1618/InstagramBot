@@ -10,8 +10,8 @@ Panel design: Nikola Petrovic
 This project was developed exclusively for the purposes of learning and any kind of use of the software for spam purposes is not allowed.
 
 ### Bot and Panel
-Bot use unofficial Instagram [API](https://github.com/mgp25/Instagram-API) created by mgp25.  
-Panel is created in MeteorJS.  
+The bot use unofficial Instagram [API](https://github.com/mgp25/Instagram-API) created by mgp25.  
+The panel was created in [MeteorJS](https://github.com/meteor/meteor).  
 
 ## What it does?
 ### Followers
