@@ -10,7 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "@types/moment-timezone": "^0.5.12",
-    "bcrypt": "^3.0.3",
+    "bcrypt": "^5.0.0",
     "chart.js": "^2.8.0",
     "meteor-node-stubs": "^0.4.1",
     "moment-timezone": "^0.5.25",
