@@ -13,7 +13,7 @@
     "bcrypt": "^5.0.0",
     "chart.js": "^2.9.4",
     "meteor-node-stubs": "^0.4.1",
-    "moment-timezone": "^0.5.25",
+    "moment-timezone": "^0.5.35",
     "simplebar": "^4.0.0"
   },
   "meteor": {
